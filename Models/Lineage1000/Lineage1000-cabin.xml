@@ -2,7 +2,7 @@
 
 <PropertyList>
   
-	<path>Aircraft/VIP/Models/Cabin/Lineage1000-cabin.ac</path>
+	<path>Aircraft/VIP/Models/Lineage1000/Lineage1000-cabin.ac</path>
 
 	<!-- Cabin Illumination -->
 
@@ -32,7 +32,7 @@
 		<type>select</type>
 		<object-name>FastenSeatbelts</object-name>
 		<condition>
-				<property>controls/switches/seatbelt-sign</property>
+			<property>controls/switches/seatbelt-sign</property>
 		</condition>
 	</animation>
 
