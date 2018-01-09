@@ -1,9 +1,9 @@
 <?xml version = '1.0' encoding = 'UTF-8' ?>
 <PropertyList>
   
-  <path>Aircraft/VIP/Models/RAT.ac</path>
+	<path>Aircraft/VIP/Models/Lineage1000/RAT.ac</path>
 
-<!-- Ram Air Turbine Select and Spin Animations -->
+	<!-- Ram Air Turbine Select and Spin Animations -->
 	
 	<animation>
 		<name>Ram Air Turbine Spin</name>
@@ -11,11 +11,11 @@
 		<object-name>fan</object-name>
 		<factor>5</factor>
 		<property>velocities/airspeed-kt</property>
-        <center>
-            <x-m>0</x-m>
-            <y-m>0</y-m>
-            <z-m>0</z-m>
-        </center>
+	        <center>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+		</center>
 		<axis>
 			<x>1</x>
 			<y>0</y>
@@ -29,7 +29,7 @@
 		<object-name>fan</object-name>
 		<object-name>holder</object-name>
 		<condition>    		
-          			<property>controls/electric/ram-air-turbine</property>
+       			<property>controls/electric/ram-air-turbine</property>
 		</condition>
 	</animation>
 

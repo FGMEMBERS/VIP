@@ -2,7 +2,7 @@
 
 <PropertyList>
 
-	<path>../../Models/FlightDeck/erj-flightdeck.ac</path>
+	<path>Aircraft/VIP/Models/Lineage1000/Lineage1000-flightdeck.ac</path>
 
 	<animation>
 		<type>translate</type>
@@ -75,7 +75,7 @@
 		</emission>
 	</animation>
 
-<!-- HUD -->
+	<!-- HUD -->
 
 	<model>
 		<path>Aircraft/VIP/XMLs/FlightDeck/hud.xml</path>
@@ -95,7 +95,7 @@
 		</offsets>
 	</model>
 
-<!-- Overhead Compass -->
+	<!-- Overhead Compass -->
 
 	<animation>
 		<type>textranslate</type>
@@ -108,7 +108,7 @@
 		</axis>
 	</animation>
 
-<!-- Cockpit Door Animation -->
+	<!-- Cockpit Door Animation -->
 
 	<animation>
 		<type>pick</type>
@@ -146,7 +146,7 @@
 		</axis>
 	</animation>
 
-<!-- Engine Starter Case Animations -->
+	<!-- Engine Starter Case Animations -->
 
 	<animation>
 		<type>pick</type>
@@ -220,7 +220,7 @@
 		</axis>
 	</animation>
 
-<!-- Autobrake Settings -->
+	<!-- Autobrake Settings -->
 
 	<animation>
 		<type>pick</type>
@@ -283,14 +283,14 @@
 		</condition>
 	</animation>
 
-<!-- Overhead Panel -->
+	<!-- Overhead Panel -->
 	
 	<model>
 		<name>Overhead Panel</name>
 		<path>Aircraft/VIP/XMLs/OHpanel/OHpanel.xml</path>
 	</model>
 
-<!-- Yokes Animation -->
+	<!-- Yokes Animation -->
 
 	<animation>
 		<type>rotate</type>
@@ -343,93 +343,93 @@
 		</axis>
 	</animation>
 
-<!-- Flight Displays -->
+	<!-- Flight Displays -->
 
 	<model>
 		<name>Standby AI</name>
 		<path>Aircraft/VIP/XMLs/Primus-Epic/stby-ai.xml</path>
-        <offsets>
-            <x-m>-12.5489</x-m>
-            <y-m>-0.15</y-m>
-            <z-m>1.0245</z-m>
-            <pitch-deg>-13.5</pitch-deg>
-        </offsets>
+		<offsets>
+			<x-m>-12.5489</x-m>
+			<y-m>-0.15</y-m>
+			<z-m>1.0245</z-m>
+			<pitch-deg>-13.5</pitch-deg>
+		</offsets>
 	</model>
 
 	<model>
 		<name>Standby Altimeter</name>
 		<path>Aircraft/VIP/XMLs/Primus-Epic/stby-alt.xml</path>
-        <offsets>
-            <x-m>-12.5489</x-m>
-            <y-m>0.17</y-m>
-            <z-m>1.0245</z-m>
-            <pitch-deg>-13.5</pitch-deg>
-        </offsets>
+		<offsets>
+			<x-m>-12.5489</x-m>
+			<y-m>0.17</y-m>
+			<z-m>1.0245</z-m>
+			<pitch-deg>-13.5</pitch-deg>
+		</offsets>
 	</model>
 
 	<model>
 		<name>Primary Flight Display Left</name>
 		<path>Aircraft/VIP/XMLs/Primus-Epic/PFD.xml</path>
-        <offsets>
-            <x-m>-12.53</x-m>
-            <y-m>-0.53</y-m>
-            <z-m>0.96</z-m>
-            <pitch-deg>-13</pitch-deg>
-        </offsets>
+		<offsets>
+			<x-m>-12.53</x-m>
+			<y-m>-0.53</y-m>
+			<z-m>0.96</z-m>
+			<pitch-deg>-13</pitch-deg>
+		</offsets>
 	</model>
 
 	<model>
 		<name>Primary Flight Display Right</name>
 		<path>Aircraft/VIP/XMLs/Primus-Epic/PFD.xml</path>
-        <offsets>
-            <x-m>-12.53</x-m>
-            <y-m>0.55</y-m>
-            <z-m>0.96</z-m>
-            <pitch-deg>-13</pitch-deg>
-        </offsets>
+		<offsets>
+			<x-m>-12.53</x-m>
+			<y-m>0.55</y-m>
+			<z-m>0.96</z-m>
+			<pitch-deg>-13</pitch-deg>
+		</offsets>
 	</model>
 
 	<model>
 		<name>Main Flight Display Right</name>
 		<path>Aircraft/VIP/XMLs/Primus-Epic/MFD2.xml</path>
-        <offsets>
-            <x-m>-12.53</x-m>
-            <y-m>0.33</y-m>
-            <z-m>0.96</z-m>
-            <pitch-deg>-13</pitch-deg>
-        </offsets>
+		<offsets>
+			<x-m>-12.53</x-m>
+			<y-m>0.33</y-m>
+			<z-m>0.96</z-m>
+			<pitch-deg>-13</pitch-deg>
+		</offsets>
 	</model>
 
 	<model>
 		<name>Main Flight Display Left</name>
 		<path>Aircraft/VIP/XMLs/Primus-Epic/MFD.xml</path>
-        <offsets>
-            <x-m>-12.53</x-m>
-            <y-m>-0.31</y-m>
-            <z-m>0.96</z-m>
-            <pitch-deg>-13</pitch-deg>
-        </offsets>
+		<offsets>
+			<x-m>-12.53</x-m>
+			<y-m>-0.31</y-m>
+			<z-m>0.96</z-m>
+			<pitch-deg>-13</pitch-deg>
+		</offsets>
 	</model>
 
 	<model>
 		<name>EICAS Panel</name>
 		<path>Aircraft/VIP/XMLs/Primus-Epic/EICAS.xml</path>
-        <offsets>
-            <x-m>-12.53</x-m>
-            <y-m>0</y-m>
-            <z-m>0.96</z-m>
-            <pitch-deg>-13</pitch-deg>
-        </offsets>
+		<offsets>
+			<x-m>-12.53</x-m>
+			<y-m>0</y-m>
+			<z-m>0.96</z-m>
+			<pitch-deg>-13</pitch-deg>
+		</offsets>
 	</model>
 
-<!-- CDUs -->
+	<!-- CDUs -->
 
 	<model>
 		<path>Aircraft/VIP/Common/cdu/boeing.xml</path>
 		<offsets>
-            <x-m>-12.3423</x-m>
-            <y-m>-0.1387</y-m>
-            <z-m>0.7158</z-m>
+			<x-m>-12.3423</x-m>
+			<y-m>-0.1387</y-m>
+			<z-m>0.7158</z-m>
 			<pitch-deg>-69</pitch-deg>
 		</offsets>
 		<overlay>
@@ -440,9 +440,9 @@
 	<model>
 		<path>Aircraft/VIP/Common/cdu/boeing.xml</path>
 		<offsets>
-            <x-m>-12.3423</x-m>
-            <y-m>0.1387</y-m>
-            <z-m>0.7158</z-m>
+			<x-m>-12.3423</x-m>
+			<y-m>0.1387</y-m>
+			<z-m>0.7158</z-m>
 			<pitch-deg>-69</pitch-deg>
 		</offsets>
 		<overlay>
@@ -450,11 +450,11 @@
 		</overlay>
 	</model>
 
-<!-- Autopilot Control Panel -->
+	<!-- Autopilot Control Panel -->
 
-<!-- Knobs Pick Animations -->
+	<!-- Knobs Pick Animations -->
 
-<!-- CRS Knob 1 Pick Animation -->
+	<!-- CRS Knob 1 Pick Animation -->
 
 	<animation>
 		<type>pick</type>
@@ -505,7 +505,7 @@
 		</action>
 	</animation>
 
-<!-- CRS Knob 2 Pick Animations -->
+	<!-- CRS Knob 2 Pick Animations -->
 
 	<animation>
 		<type>pick</type>
@@ -556,7 +556,7 @@
 		</action>
 	</animation>
 
-<!-- HDG Knob Pick Animations -->
+	<!-- HDG Knob Pick Animations -->
 
 	<animation>
 		<type>pick</type>
@@ -607,7 +607,7 @@
 		</action>
 	</animation>
 
-<!-- SPD Knob Pick Animations -->
+	<!-- SPD Knob Pick Animations -->
 
 	<animation>
 		<type>pick</type>
@@ -672,7 +672,7 @@
 		</action>
 	</animation>
 
-<!-- ALT Knob Pick Animations -->
+	<!-- ALT Knob Pick Animations -->
 
 	<animation>
 		<type>pick</type>
@@ -701,7 +701,7 @@
 		</action>
 	</animation>
 
-<!-- VS Knob Pick Animations -->
+	<!-- VS Knob Pick Animations -->
 
 	<animation>
 		<type>pick</type>
@@ -729,7 +729,7 @@
 		</action>
 	</animation>
 
-<!-- FPA Knob Pick Animations -->
+	<!-- FPA Knob Pick Animations -->
 
 	<animation>
 		<type>pick</type>
@@ -768,9 +768,9 @@
 		</action>
 	</animation>
 
-<!-- Buttons and Lights Animations -->
+	<!-- Buttons and Lights Animations -->
 
-<!-- IAS-MACH -->
+	<!-- IAS-MACH -->
 
 	<animation>
 		<type>pick</type>
@@ -787,7 +787,7 @@
 		</action>
 	</animation>
 
-<!-- FD -->
+	<!-- FD -->
 
 	<animation>
 		<type>pick</type>
@@ -809,7 +809,7 @@
 		</condition>
 	</animation>
 
-<!-- NAV -->
+	<!-- NAV -->
 
 	<animation>
 		<type>pick</type>
@@ -836,7 +836,7 @@
 		</condition>
 	</animation>
 
-<!-- HDG -->
+	<!-- HDG -->
 
 	<animation>
 		<type>pick</type>
@@ -863,7 +863,7 @@
 		</condition>
 	</animation>
 
-<!-- APP -->
+	<!-- APP -->
 
 	<animation>
 		<type>pick</type>
@@ -885,7 +885,7 @@
 		</condition>
 	</animation>
 
-<!-- BANK -->
+	<!-- BANK -->
 
 	<animation>
 		<type>pick</type>
@@ -912,7 +912,7 @@
 		</condition>
 	</animation>
 
-<!-- AP -->
+	<!-- AP -->
 
 	<animation>
 		<type>pick</type>
@@ -935,7 +935,7 @@
 		</condition>
 	</animation>
 
-<!-- YD -->
+	<!-- YD -->
 
 	<animation>
 		<type>pick</type>
@@ -958,7 +958,7 @@
 		</condition>
 	</animation>
 
-<!-- SRC -->
+	<!-- SRC -->
 
 	<animation>
 		<type>pick</type>
@@ -966,17 +966,17 @@
 		<action>
 			<button>0</button>
 			<repeatable type="bool">false</repeatable>
-					<binding>
-						<command>property-cycle</command>
-						<property>controls/autoflight/nav-mode</property>
-						<value>0</value>
-						<value>1</value>
-						<value>2</value>
-					</binding>
+			<binding>
+				<command>property-cycle</command>
+				<property>controls/autoflight/nav-mode</property>
+				<value>0</value>
+				<value>1</value>
+				<value>2</value>
+			</binding>
 		</action>
 	</animation>
 
-<!-- A/T -->
+	<!-- A/T -->
 
 	<animation>
 		<type>pick</type>
@@ -998,7 +998,7 @@
 		</condition>
 	</animation>
 
-<!-- VNAV -->
+	<!-- VNAV -->
 
 	<animation>
 		<type>pick</type>
@@ -1012,6 +1012,7 @@
 			</binding>
 		</action>
 	</animation>
+
 	<animation>
 		<type>select</type>
 		<object-name>VNAV.light</object-name>
@@ -1020,7 +1021,7 @@
 		</condition>
 	</animation>
 
-<!-- FLCH -->
+	<!-- FLCH -->
 
 	<animation>
 		<type>pick</type>
@@ -1034,6 +1035,7 @@
 			</binding>
 		</action>
 	</animation>
+
 	<animation>
 		<type>select</type>
 		<object-name>FLCH.light</object-name>
@@ -1042,7 +1044,7 @@
 		</condition>
 	</animation>
 
-<!-- ALT -->
+	<!-- ALT -->
 
 	<animation>
 		<type>pick</type>
@@ -1064,7 +1066,7 @@
 		</condition>
 	</animation>
 
-<!-- FPA -->
+	<!-- FPA -->
 
 	<!-- animation>
 		<type>pick</type>
@@ -1088,7 +1090,7 @@
 		</condition>
 	</animation>
 
-<!-- VS -->
+	<!-- VS -->
 
 	<animation>
 		<type>pick</type>
@@ -1110,9 +1112,9 @@
 		</condition>
 	</animation>
 
-<!-- Throttle, Gear-Lever, Flaps-Lever, Speedbrake-Lever and Parking Brake Lever Animations -->
+	<!-- Throttle, Gear-Lever, Flaps-Lever, Speedbrake-Lever and Parking Brake Lever Animations -->
 
-<!-- Parking Brake Lever -->
+	<!-- Parking Brake Lever -->
 
 	<animation>
 		<type>rotate</type>
@@ -1144,7 +1146,7 @@
 		</action>
 	</animation>
 
-<!-- Speedbrake Lever -->
+	<!-- Speedbrake Lever -->
 
 	<animation>
 		<type>rotate</type>
@@ -1179,7 +1181,7 @@
 		</action>
 	</animation>
 
-<!-- Flaps Lever -->
+	<!-- Flaps Lever -->
 
 	<animation>
 		<type>translate</type>
@@ -1205,7 +1207,7 @@
 		</action>
 	</animation>
 
-<!-- Gear Lever -->
+	<!-- Gear Lever -->
 
 	<animation>
 		<type>rotate</type>
@@ -1236,7 +1238,7 @@
 		</action>
 	</animation>
 
-<!-- Throttles -->
+	<!-- Throttles -->
 
 	<animation>
 		<type>rotate</type>
@@ -1328,7 +1330,7 @@
 		</action>
 	</animation>
 
-<!-- Trimmers -->
+	<!-- Trimmers -->
 
 	<animation>
 		<name>Rudder trim pick</name>
@@ -1432,7 +1434,7 @@
 		</axis>
 	</animation>
 
-<!-- Rudder Foot Pedal Animations -->
+	<!-- Rudder Foot Pedal Animations -->
 
 	<animation>
 		<type>translate</type>
@@ -1458,8 +1460,8 @@
 		</axis>
 	</animation>
 	
-
 	<!-- Engine controls -->
+
 	<animation>
 		<type>pick</type>
 		<object-name>e1.ign</object-name>
@@ -1472,6 +1474,7 @@
 			</binding>
 		</action>
 	</animation>
+
 	<animation>
 		<name>Engine start knob 1 rotate</name>
 		<type>rotate</type>
@@ -1503,6 +1506,7 @@
 			</binding>
 		</action>
 	</animation>
+
 	<animation>
 		<name>Engine start knob 2 rotate</name>
 		<type>rotate</type>
@@ -1522,7 +1526,6 @@
 		</axis>
 	</animation>
 
-
 	<animation>
 		<name>Engine 1 switch pick</name>
 		<type>pick</type>
@@ -1536,6 +1539,7 @@
 			</binding>
 		</action>
 	</animation>
+
 	<animation>
 		<name>Engine 1 cutoff switch rotate</name>
 		<type>rotate</type>
@@ -1554,6 +1558,7 @@
 			<z2-m>0.7127</z2-m>
 		</axis>
 	</animation>
+
 	<animation>
 		<name>Engine 2  switch pick</name>
 		<type>pick</type>
@@ -1567,6 +1572,7 @@
 			</binding>
 		</action>
 	</animation>
+
 	<animation>
 		<name>Engine 2 switch rotate</name>
 		<type>rotate</type>
@@ -1586,7 +1592,7 @@
 		</axis>
 	</animation>
 
-<!-- Ram Air Turbine Manual Deploy -->
+	<!-- Ram Air Turbine Manual Deploy -->
 
 	<animation>
 		<name>Ram Air Turbine Manual Deploy pick</name>

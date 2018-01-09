@@ -1,7 +1,8 @@
 <?xml version = '1.0' encoding = 'UTF-8' ?>
+
 <PropertyList>
   
-  <path>Aircraft/VIP/Models/Lineage1000-stair.ac</path>
+	<path>Aircraft/VIP/Models/Lineage1000/Lineage1000-stair.ac</path>
 
 	<effect>
 		<inherits-from>Effects/lightmap</inherits-from>
@@ -16,18 +17,18 @@
 		<object-name>stairdoor.l1</object-name>
 	</effect>
 
-<!-- Livery Selection Animation -->
+	<!-- Livery Selection Animation -->
 
-    <animation>
-        <type>material</type>
-        <object-name>stairdoor.l1</object-name>
-        <object-name>stairdoor.l2</object-name>
-        <property-base>sim/model/livery</property-base>
-        <texture-prop>texture</texture-prop>
-        <texture>blank.png</texture>
-    </animation>
+	<animation>
+		<type>material</type>
+		<object-name>stairdoor.l1</object-name>
+		<object-name>stairdoor.l2</object-name>
+		<property-base>sim/model/livery</property-base>
+		<texture-prop>texture</texture-prop>
+		<texture>blank.png</texture>
+	</animation>
 
-<!-- Stair Door L1 Animation -->
+	<!-- Stair Door L1 Animation -->
 
 	<animation>
 		<type>pick</type>
@@ -38,7 +39,7 @@
 			<binding>
 				<command>nasal</command>
 				<script>
-				 erj.doors.toggle("l1-stairs");
+					erj.doors.toggle("l1-stairs");
 				</script>
 			</binding>
 		</action>

@@ -88,6 +88,7 @@
 		<gui>
 			<dialogs>
 				<autopilot>
+					<!-- speed in kts for SYS7/8/9 APs -->
 					<kts-select type="bool">true</kts-select>
 					<mach-select tpye="bool">false</mach-select>
 				</autopilot>
@@ -295,153 +296,17 @@
 			</key>
 		</help>
 
-		<menubar>
-			<default>
-				<menu n="3">
-					<item>
-						<name>autopilot</name>
-						<label>Autopilot Settings</label>
-						<binding>
-							<command>nasal</command>
-							<script>
-								var autopilot = gui.Dialog.new("sim/gui/dialogs/autopilot/dialog", "Aircraft/JPack/Voodoomaster/Dialogs/autopilot9.xml");
-								autopilot.open();
-							</script>
-							<!-- script>
-							 var autopilot = gui.Dialog.new("sim/gui/dialogs/autopilot/dialog", "Aircraft/VIP/Systems/Lineage1000-autopilot-dlg.xml");
-							 autopilot.open();
-							</script -->
-						</binding>
-					</item>
-				</menu>
-
-		                <menu n="5">
-		                	<item n="1">
-			        		<label>Radio Stack</label>
-						<binding>
-                            				<command>nasal</command>
-                            				<script>dialogs.Radio.open()</script>
-                        			</binding>
-                    			</item>
-                		</menu>
-
-				<menu n="100">
-					<label>Lineage 1000</label>
-					<enabled type="bool">true</enabled>
-					<item>
-						<name>autostart</name>
-						<label>Autostart</label>
-						<binding>
-							<command>property-toggle</command>
-							<property>sim/model/start-idling</property>
-						</binding>
-					</item>
-
-					<item>
-						<label>----------------------------------------------</label>
-					</item>
-
-					<item>
-						<name>lights</name>
-						<label>Lights</label>
-						<binding>
-							<command>nasal</command>
-							<script>
-								var lights = gui.Dialog.new("sim/gui/dialogs/lights/dialog", "Aircraft/VIP/Systems/Lineage1000-lights-dlg.xml");
-								lights.open();
-							</script>
-						</binding>
-					</item>
-
-					<item>
-	      					<label>Announcements</label>
-	      					<binding>
-		       					<command>nasal</command>
-							<script>
-				  				var mal = gui.Dialog.new("/sim/gui/dialogs/VIP[1]/menu/dialog", "Aircraft/VIP/Systems/Lineage1000-announcements-dlg.xml");
-		        					mal.open();
-       							</script>
-      						</binding>
-     					</item>
-
-					<item>
-						<label>----------------------------------------------</label>
-					</item>
-
-					<item>
-						<name>pushback</name>
-						<label>Pushback</label>
-						<binding>
-							<command>dialog-show</command>
-							<dialog-name>pushback</dialog-name>
-						</binding>
-					</item>
-
-					<item>
-	      					<label>Airport Operations</label>
-      						<binding>
-       							<command>nasal</command>
-       							<script>
-			  					var mal = gui.Dialog.new("/sim/gui/dialogs/VIP[0]/menu/dialog", "Aircraft/VIP/Systems/Lineage1000-operations-dlg.xml");
-        							mal.open();
-       							</script>
-      						</binding>
-     					</item>
-
-					<item>
-						<label>----------------------------------------------</label>
-					</item>
-
-					<item>
-						<name>tiller</name>
-						<label>Tiller Steering</label>
-						<binding>
-							<command>nasal</command>
-							<script>
-								var tiller = gui.Dialog.new("sim/gui/dialogs/tiller/dialog", "Aircraft/VIP/Systems/Lineage1000-tiller-dlg.xml");
-								tiller.open();
-							</script>
-						</binding>
-					</item>
-
-					<item>
-						<label>Select Livery</label>
-						<binding>
-							<command>nasal</command>
-							<script>
-							 aircraft.livery.dialog.open()
-							</script>
-						</binding>
-					</item>
-
-				</menu>
-			</default>
-		</menubar>
+		<menubar include="Aircraft/VIP/Dialogs/Lineage1000/pilot-menu.xml"/>
 
 		<!-- Systems -->
 		<systems>
-			<!-- autopilot>
-				<name>Autopilot</name>
-				<path>Aircraft/VIP/Systems/Lineage1000-autopilot.xml</path>
-			</autopilot>
-			<autopilot>
-				<name>Autopilot helpers</name>
-				<path>Aircraft/VIP/Common/generic-autopilot-helper.xml</path>
-			</autopilot>
-			<autopilot>
-				<name>Autobrake</name>
-				<path>Aircraft/VIP/Systems/Lineage1000-autobrake.xml</path>
-			</autopilot>
-			<autopilot>
-				<name>Spoilers</name>
-				<path>Aircraft/VIP/Systems/Lineage1000-spoilers.xml</path>
-			</autopilot -->
 			<path>Aircraft/767/Systems/Lineage1000/Lineage1000.xml</path>
 			<electrical>
 				<path>Aircraft/Generic/generic-electrical.xml</path>
 			</electrical>
+
 			<autopilot>
-				<path>Aircraft/JPack/Voodoomaster/Systems/SYS9_0_autopilot.xml</path>
+				<path>Aircraft/VIP/Voodoomaster/Systems/Autopilot/SYS9_1_autopilot.xml</path>
 			</autopilot>
 		</systems>
 
@@ -968,45 +833,23 @@
 		</mass-and-balance>
 
 	</limits>
-
+    
+	<!-- Autopilot initialization -->
 	<autopilot>
-		<!-- autobrake>
-			<config>
-				<idle-throttle type="double">0.1</idle-throttle>
-				<pilot-input type="double">0</pilot-input>
-			</config>
-			<step type="int">0</step>
-		</autobrake -->
 
 		<settings>
 			<kts-mach-select type="string">kts</kts-mach-select>
-			<max-pitch type="float"> 6.0</max-pitch>
-			<min-pitch type="float">-4.0</min-pitch>
-			<bank-angle-limit-deg type="int">35</bank-angle-limit-deg>
-			<heading-bug-deg type="double">0</heading-bug-deg>
-			<target-speed-kt type="double">250</target-speed-kt>
-			<target-speed-mach type="double">0</target-speed-mach>
-			<target-altitude-ft type="double">33000</target-altitude-ft>
-			<vertical-speed-fpm type="double">2000</vertical-speed-fpm>
-			<altitude-setting-ft type="double">10000</altitude-setting-ft>
-			<!-- autothrottle type="bool">false</autothrottle>
-			<engaged type="bool">false</engaged>
-			<altitude>altitude-hold</altitude>
-			<heading>dg-heading-hold</heading>
-			<heading-mode type="int">0</heading-mode>
-			<speed-mode type="int">0</speed-mode -->
+			<max-pitch type="float"> 8.0</max-pitch>
+			<min-pitch type="float">-6.0</min-pitch>
+			<bank-angle-limit-deg type="int">65</bank-angle-limit-deg>
 		</settings>
 
 		<internal>
 			<target-pitch-deg type="float">0.00</target-pitch-deg>
-			<max-pitch type="float"> 6.0</max-pitch>
-			<min-pitch type="float">-4.0</min-pitch>
+			<max-pitch type="float"> 8.0</max-pitch>
+			<min-pitch type="float">-6.0</min-pitch>
 		</internal>
 
-		<!-- flight-director-serviceable type="bool">true</flight-director-serviceable>
-		<autoflight-serviceable type="bool">true</autoflight-serviceable>
-		<autothrottle-serviceable type="bool">true</autothrottle-serviceable>
-		<yaw-damper-serviceable type="bool">true</yaw-damper-serviceable -->
 	</autopilot>
 
 	<!-- Voodoomaster plane specific initializations -->
@@ -1045,6 +888,9 @@
 		<erj>
 			<file>Aircraft/VIP/Nasal/Lineage1000/doorsLineage1000.nas</file>
 		</erj>
+		<livery>
+	        	<file>Aircraft/VIP/Nasal/Lineage1000/liveryLineage1000.nas</file>
+	    	</livery>
 		<dialogs>
 			<file>Aircraft/VIP/Nasal/Lineage1000/radioLineage1000.nas</file>
 		</dialogs>
