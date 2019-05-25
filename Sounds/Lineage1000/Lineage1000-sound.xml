@@ -3,42 +3,249 @@
 <PropertyList>
 
 	<fx>
+
 		<engine>
-			<name>left engine</name>
-        		<path>Aircraft/VIP/Sounds/Lineage1000/jet.wav</path>
+			<name>left engine start outside</name>
+			<path>/Sounds/Lineage1000/turbine_start.wav</path>
+			<mode>once</mode>
+			<condition>
+				<and>
+					<property>engines/engine[0]/starter</property>
+					<not>
+	                			<property>sim/current-view/internal</property>
+					</not>
+				</and>
+			</condition>
+			<volume>0.5</volume>
+			<volume>
+				<property>sim/sound/ovolume</property>
+				<factor>0.25</factor>
+			</volume>
+			<position>
+				<x>0</x>
+				<y>-9.8</y>
+				<z>-3</z>
+			</position>
+			<reference-dist>10.0</reference-dist>
+			<max-dist>6000.0</max-dist>
+		</engine>
+
+		<engine>
+			<name>left engine start inside</name>
+			<path>/Sounds/Lineage1000/turbine_start.wav</path>
+			<mode>once</mode>
+			<condition>
+				<and>
+					<property>engines/engine[0]/starter</property>
+                			<property>sim/current-view/internal</property>
+				</and>
+			</condition>
+			<volume>0.5</volume>
+			<volume>
+				<property>sim/sound/ivolume</property>
+				<factor>0.10</factor>
+			</volume>
+			<position>
+				<x>0</x>
+				<y>-9.8</y>
+				<z>-3</z>
+			</position>
+			<reference-dist>10.0</reference-dist>
+			<max-dist>6000.0</max-dist>
+		</engine>
+
+		<engine>
+			<name>right engine start outside</name>
+			<path>/Sounds/Lineage1000/turbine_start.wav</path>
+			<mode>once</mode>
+			<condition>
+				<and>
+					<property>engines/engine[1]/starter</property>
+					<not>
+	                			<property>sim/current-view/internal</property>
+					</not>
+				</and>
+			</condition>
+			<volume>0.5</volume>
+			<volume>
+				<property>sim/sound/ovolume</property>
+				<factor>0.25</factor>
+			</volume>
+			<position>
+				<x>0</x>
+				<y>-9.8</y>
+				<z>-3</z>
+			</position>
+			<reference-dist>10.0</reference-dist>
+			<max-dist>6000.0</max-dist>
+		</engine>
+
+		<engine>
+			<name>right engine start inside</name>
+			<path>/Sounds/Lineage1000/turbine_start.wav</path>
+			<mode>once</mode>
+			<condition>
+				<and>
+					<property>engines/engine[1]/starter</property>
+                			<property>sim/current-view/internal</property>
+				</and>
+			</condition>
+			<volume>0.5</volume>
+			<volume>
+				<property>sim/sound/ivolume</property>
+				<factor>0.10</factor>
+			</volume>
+			<position>
+				<x>0</x>
+				<y>-9.8</y>
+				<z>-3</z>
+			</position>
+			<reference-dist>10.0</reference-dist>
+			<max-dist>6000.0</max-dist>
+		</engine>
+
+		<engine>
+			<name>left engine thunder outside</name>
+        		<path>Sounds/Lineage1000/jet.wav</path>
         		<mode>looped</mode>
         		<condition>
-            			<not>
-                			<property>controls/engines/engine[0]/cutoff</property>
-            			</not>
+				<and>
+	            			<not>
+	                			<property>controls/engines/engine[0]/cutoff</property>
+					</not>
+					<not>
+	                			<property>sim/current-view/internal</property>
+					</not>
+				</and>
         		</condition>
         		<volume>
-            			<property>engines/engine[0]/thrust-lbs</property>
-            			<factor>0.000015</factor>
+            			<property>engines/engine[0]/thrust_lb</property>
+            			<factor>0.00015</factor>
             			<min>0.0</min>
             			<max>1</max>
         		</volume>
         		<volume>
-            			<property>sim/sound/Ovolume</property>
+				<property>sim/sound/ovolume</property>
+				<factor>1.00</factor>
         		</volume>
         		<position>
             			<x>0</x>
             			<y>-9.8</y>
             			<z>-3</z>
         		</position>
-        		<reference-dist>200.0</reference-dist>
-        		<max-dist>500.0</max-dist>
+        		<reference-dist>10.0</reference-dist>
+        		<max-dist>6000.0</max-dist>
+    		</engine>
+
+		<engine>
+			<name>left engine thunder inside</name>
+        		<path>Sounds/Lineage1000/jet.wav</path>
+        		<mode>looped</mode>
+        		<condition>
+				<and>
+	            			<not>
+	                			<property>controls/engines/engine[0]/cutoff</property>
+					</not>
+                			<property>sim/current-view/internal</property>
+				</and>
+        		</condition>
+        		<volume>
+            			<property>engines/engine[0]/thrust_lb</property>
+            			<factor>0.00015</factor>
+            			<min>0.0</min>
+            			<max>1</max>
+        		</volume>
+        		<volume>
+				<property>sim/sound/ivolume</property>
+				<factor>0.50</factor>
+        		</volume>
+        		<position>
+            			<x>0</x>
+            			<y>-9.8</y>
+            			<z>-3</z>
+        		</position>
+        		<reference-dist>10.0</reference-dist>
+        		<max-dist>6000.0</max-dist>
+    		</engine>
+
+		<engine>
+			<name>right engine thunder outside</name>
+        		<path>Sounds/Lineage1000/jet.wav</path>
+        		<mode>looped</mode>
+        		<condition>
+				<and>
+	            			<not>
+        	        			<property>controls/engines/engine[1]/cutoff</property>
+        	    			</not>
+					<not>
+	                			<property>sim/current-view/internal</property>
+					</not>
+				</and>
+        		</condition>
+        		<volume>
+            			<property>engines/engine[1]/thrust_lb</property>
+            			<factor>0.00015</factor>
+            			<min>0.0</min>
+            			<max>1</max>
+        		</volume>
+        		<volume>
+				<property>sim/sound/ovolume</property>
+				<factor>1.00</factor>
+        		</volume>
+        		<position>
+            			<x>0</x>
+            			<y>-9.8</y>
+            			<z>-3</z>
+        		</position>
+        		<reference-dist>10.0</reference-dist>
+        		<max-dist>6000.0</max-dist>
+    		</engine>
+
+		<engine>
+			<name>right engine thunder inside</name>
+        		<path>Sounds/Lineage1000/jet.wav</path>
+        		<mode>looped</mode>
+        		<condition>
+				<and>
+	            			<not>
+        	        			<property>controls/engines/engine[1]/cutoff</property>
+        	    			</not>
+                			<property>sim/current-view/internal</property>
+				</and>
+        		</condition>
+        		<volume>
+            			<property>engines/engine[1]/thrust_lb</property>
+            			<factor>0.00015</factor>
+            			<min>0.0</min>
+            			<max>1</max>
+        		</volume>
+        		<volume>
+				<property>sim/sound/ivolume</property>
+				<factor>0.50</factor>
+        		</volume>
+        		<position>
+            			<x>0</x>
+            			<y>-9.8</y>
+            			<z>-3</z>
+        		</position>
+        		<reference-dist>10.0</reference-dist>
+        		<max-dist>6000.0</max-dist>
     		</engine>
 
     		<engine>
-        		<name>left n1</name>
-        		<path>Aircraft/VIP/Sounds/Lineage1000/whine.wav</path>
+        		<name>left engine n1 outside</name>
+        		<path>/Sounds/Lineage1000/whine.wav</path>
         		<mode>looped</mode>
         		<condition>
-            			<greater-than>
-                			<property>engines/engine[0]/n1</property>
-                			<value>2</value>
-            			</greater-than>
+				<and>
+	            			<greater-than>
+        	        			<property>engines/engine[0]/n1</property>
+        	        			<value>2</value>
+        	    			</greater-than>
+					<not>
+	                			<property>sim/current-view/internal</property>
+					</not>
+				</and>
         		</condition>
         		<pitch>
             			<property>/engines/engine[0]/n1</property>
@@ -54,7 +261,8 @@
             			<max>8</max>
         		</volume>
         		<volume>
-            			<property>sim/sound/effects/volume</property>
+				<property>sim/sound/ovolume</property>
+				<factor>0.25</factor>
         		</volume>
         		<position>
             			<x>0</x>
@@ -62,18 +270,142 @@
             			<z>-3</z>
         		</position>
         		<reference-dist>10.0</reference-dist>
-        		<max-dist>30.0</max-dist>
+        		<max-dist>6000.0</max-dist>
     		</engine>
 
     		<engine>
-        		<name>left n1_2</name>
-        		<path>Aircraft/VIP/Sounds/Lineage1000/turbine.wav</path>
+        		<name>left engine n1 inside</name>
+        		<path>/Sounds/Lineage1000/whine.wav</path>
         		<mode>looped</mode>
         		<condition>
-            			<greater-than>
-                			<property>engines/engine[0]/n1</property>
-                			<value>2</value>
-            			</greater-than>
+				<and>
+	            			<greater-than>
+        	        			<property>engines/engine[0]/n1</property>
+        	        			<value>2</value>
+        	    			</greater-than>
+                			<property>sim/current-view/internal</property>
+				</and>
+        		</condition>
+        		<pitch>
+            			<property>/engines/engine[0]/n1</property>
+            			<offset>0</offset>
+            			<factor>0.02</factor>
+            			<min>0.0</min>
+            			<max>1.5</max>
+        		</pitch>
+		        <volume>
+            			<property>engines/engine[0]/n1</property>
+            			<factor>0.1</factor>
+            			<min>1</min>
+            			<max>8</max>
+        		</volume>
+        		<volume>
+				<property>sim/sound/ivolume</property>
+				<factor>0.10</factor>
+        		</volume>
+        		<position>
+            			<x>0</x>
+            			<y>9.8</y>
+            			<z>-3</z>
+        		</position>
+        		<reference-dist>10.0</reference-dist>
+        		<max-dist>6000.0</max-dist>
+    		</engine>
+
+    		<engine>
+        		<name>right engine n1 outside</name>
+        		<path>/Sounds/Lineage1000/whine.wav</path>
+        		<mode>looped</mode>
+        		<condition>
+				<and>
+	            			<greater-than>
+	                			<property>engines/engine[1]/n1</property>
+	                			<value>2</value>
+	            			</greater-than>
+					<not>
+	                			<property>sim/current-view/internal</property>
+					</not>
+				</and>
+        		</condition>
+        		<pitch>
+            			<property>/engines/engine[1]/n1</property>
+            			<offset>0</offset>
+            			<factor>0.02</factor>
+            			<min>0.0</min>
+            			<max>1.5</max>
+        		</pitch>
+		        <volume>
+            			<property>engines/engine[1]/n1</property>
+            			<factor>0.1</factor>
+            			<min>1</min>
+            			<max>8</max>
+        		</volume>
+        		<volume>
+				<property>sim/sound/ovolume</property>
+				<factor>0.25</factor>
+        		</volume>
+        		<position>
+            			<x>0</x>
+            			<y>9.8</y>
+            			<z>-3</z>
+        		</position>
+        		<reference-dist>10.0</reference-dist>
+        		<max-dist>6000.0</max-dist>
+    		</engine>
+
+    		<engine>
+        		<name>right engine n1 inside</name>
+        		<path>/Sounds/Lineage1000/whine.wav</path>
+        		<mode>looped</mode>
+        		<condition>
+				<and>
+	            			<greater-than>
+	                			<property>engines/engine[1]/n1</property>
+	                			<value>2</value>
+	            			</greater-than>
+                			<property>sim/current-view/internal</property>
+				</and>
+        		</condition>
+        		<pitch>
+            			<property>/engines/engine[1]/n1</property>
+            			<offset>0</offset>
+            			<factor>0.02</factor>
+            			<min>0.0</min>
+            			<max>1.5</max>
+        		</pitch>
+		        <volume>
+            			<property>engines/engine[1]/n1</property>
+            			<factor>0.1</factor>
+            			<min>1</min>
+            			<max>8</max>
+        		</volume>
+        		<volume>
+				<property>sim/sound/ivolume</property>
+				<factor>0.10</factor>
+        		</volume>
+        		<position>
+            			<x>0</x>
+            			<y>9.8</y>
+            			<z>-3</z>
+        		</position>
+        		<reference-dist>10.0</reference-dist>
+        		<max-dist>6000.0</max-dist>
+    		</engine>
+
+		<engine>
+        		<name>left engine n1_2 outside</name>
+        		<path>/Sounds/Lineage1000/turbine.wav</path>
+        		<mode>looped</mode>
+        		<condition>
+				<and>
+	            			<greater-than>
+	                			<property>engines/engine[0]/n1</property>
+	                			<value>2</value>
+	            			</greater-than>
+					<not>
+	                			<property>sim/current-view/internal</property>
+					</not>
+				</and>
         		</condition>
 		        <pitch>
 				<property>/engines/engine[0]/n1</property>
@@ -89,7 +421,8 @@
             			<max>0.6</max>
         		</volume>
         		<volume>
-            			<property>sim/sound/effects/volume</property>
+				<property>sim/sound/ovolume</property>
+				<factor>0.25</factor>
         		</volume>
         		<position>
             			<x>0</x>
@@ -97,12 +430,131 @@
             			<z>-3</z>
  			</position>
         		<reference-dist>10.0</reference-dist>
-        		<max-dist>30.0</max-dist>
+        		<max-dist>6000.0</max-dist>
+    		</engine>
+
+		<engine>
+        		<name>left engine n1_2 inside</name>
+        		<path>/Sounds/Lineage1000/turbine.wav</path>
+        		<mode>looped</mode>
+        		<condition>
+				<and>
+	            			<greater-than>
+	                			<property>engines/engine[0]/n1</property>
+	                			<value>2</value>
+	            			</greater-than>
+                			<property>sim/current-view/internal</property>
+				</and>
+        		</condition>
+		        <pitch>
+				<property>/engines/engine[0]/n1</property>
+            			<offset>0</offset>
+            			<factor>0.02</factor>
+            			<min>0.0</min>
+            			<max>2.0</max>
+			</pitch>
+        		<volume>
+            			<property>engines/engine[0]/n1</property>
+            			<factor>0.1</factor>
+            			<min>0</min>
+            			<max>0.6</max>
+        		</volume>
+        		<volume>
+				<property>sim/sound/ivolume</property>
+				<factor>0.10</factor>
+        		</volume>
+        		<position>
+            			<x>0</x>
+            			<y>9.8</y>
+            			<z>-3</z>
+ 			</position>
+        		<reference-dist>10.0</reference-dist>
+        		<max-dist>6000.0</max-dist>
+    		</engine>
+
+		<engine>
+        		<name>right engine n1_2 outside</name>
+        		<path>/Sounds/Lineage1000/turbine.wav</path>
+        		<mode>looped</mode>
+        		<condition>
+				<and>
+	            			<greater-than>
+                				<property>engines/engine[1]/n1</property>
+                				<value>2</value>
+	            			</greater-than>
+					<not>
+	                			<property>sim/current-view/internal</property>
+					</not>
+				</and>
+        		</condition>
+		        <pitch>
+				<property>/engines/engine[1]/n1</property>
+            			<offset>0</offset>
+            			<factor>0.02</factor>
+            			<min>0.0</min>
+            			<max>2.0</max>
+			</pitch>
+        		<volume>
+            			<property>engines/engine[1]/n1</property>
+            			<factor>0.1</factor>
+            			<min>0</min>
+            			<max>0.6</max>
+        		</volume>
+        		<volume>
+				<property>sim/sound/ovolume</property>
+				<factor>1.00</factor>
+        		</volume>
+        		<position>
+            			<x>0</x>
+            			<y>9.8</y>
+            			<z>-3</z>
+ 			</position>
+        		<reference-dist>10.0</reference-dist>
+        		<max-dist>6000.0</max-dist>
+    		</engine>
+
+		<engine>
+        		<name>right engine n1_2 inside</name>
+        		<path>/Sounds/Lineage1000/turbine.wav</path>
+        		<mode>looped</mode>
+        		<condition>
+				<and>
+	            			<greater-than>
+                				<property>engines/engine[1]/n1</property>
+                				<value>2</value>
+	            			</greater-than>
+                			<property>sim/current-view/internal</property>
+				</and>
+        		</condition>
+		        <pitch>
+				<property>/engines/engine[1]/n1</property>
+            			<offset>0</offset>
+            			<factor>0.02</factor>
+            			<min>0.0</min>
+            			<max>2.0</max>
+			</pitch>
+        		<volume>
+            			<property>engines/engine[1]/n1</property>
+            			<factor>0.1</factor>
+            			<min>0</min>
+            			<max>0.6</max>
+        		</volume>
+        		<volume>
+				<property>sim/sound/ivolume</property>
+				<factor>0.50</factor>
+        		</volume>
+        		<position>
+            			<x>0</x>
+            			<y>9.8</y>
+            			<z>-3</z>
+ 			</position>
+        		<reference-dist>10.0</reference-dist>
+        		<max-dist>6000.0</max-dist>
     		</engine>
     
     		<engine>
-        		<name>left reverse thrust</name>
-        		<path>Aircraft/VIP/Sounds/Lineage1000/reverser.wav</path>
+        		<name>left engine reverser outside</name>
+        		<path>/Sounds/Lineage1000/reverser.wav</path>
         		<mode>looped</mode>
         		<condition>
             			<and>
@@ -114,15 +566,20 @@
                     				<property>engines/engine[0]/reverser-pos-norm</property>
                     				<value>0</value>
                 			</greater-than>
+					<not>
+	                			<property>sim/current-view/internal</property>
+					</not>
             			</and>
 			</condition>
         		<volume>
             			<property>engines/engine[0]/n1</property>
+            			<factor>0.02</factor>
             			<min>0.0</min>
-            			<max>1.0</max>
+            			<max>2.0</max>
         		</volume>
         		<volume>
-            			<property>sim/sound/effects/volume</property>
+				<property>sim/sound/ovolume</property>
+				<factor>1.00</factor>
         		</volume>
         		<position>
             			<x>0</x>
@@ -130,12 +587,12 @@
             			<z>-3</z>
         		</position>
         		<reference-dist>10.0</reference-dist>
-        		<max-dist>30.0</max-dist>
+        		<max-dist>6000.0</max-dist>
     		</engine>
-
+    
     		<engine>
-        		<name>left engine inside</name>
-        		<path>Aircraft/VIP/Sounds/Lineage1000/inside.wav</path>
+        		<name>left engine reverser inside</name>
+        		<path>/Sounds/Lineage1000/reverser.wav</path>
         		<mode>looped</mode>
         		<condition>
             			<and>
@@ -143,154 +600,22 @@
                     				<property>engines/engine[0]/n1</property>
                     				<value>2</value>
                 			</greater-than>
+                			<greater-than>
+                    				<property>engines/engine[0]/reverser-pos-norm</property>
+                    				<value>0</value>
+                			</greater-than>
                 			<property>sim/current-view/internal</property>
             			</and>
-        		</condition>
-        		<pitch>
-            			<property>/engines/engine[0]/n1</property>
-            			<offset>0</offset>
+			</condition>
+        		<volume>
+            			<property>engines/engine[0]/n1</property>
             			<factor>0.02</factor>
             			<min>0.0</min>
             			<max>2.0</max>
-        		</pitch>
-        		<volume>
-            			<property>engines/engine[0]/thrust-lbs</property>
-            			<factor>0.000015</factor>
-            			<min>0</min>
-            			<max>1</max>
         		</volume>
         		<volume>
-            			<property>sim/sound/effects/volume</property>
-        		</volume>
-        		<position>
-            			<x>0</x>
-            			<y>9.8</y>
-            			<z>-3</z>
-        		</position>
-        		<reference-dist>200.0</reference-dist>
-        		<max-dist>500.0</max-dist>
-    		</engine>
-
-    		<engine>
-        		<name>right engine</name>
-       			<path>Aircraft/VIP/Sounds/Lineage1000/jet.wav</path>
-       			<mode>looped</mode>
-       			<condition>
-     				<not>
-               				<property>controls/engines/engine[0]/cutoff</property>
-            				</not>
-      			</condition>
-       			<volume>
-       				<property>engines/engine[0]/thrust-lbs</property>
-       				<factor>0.000015</factor>
-       				<min>0.0</min>
-       				<max>1</max>
-      			</volume>
-       			<volume>
-       				<property>sim/sound/Ovolume</property>
-       			</volume>
-       			<position>
-				<x>0</x>
-        			<y>9.8</y>
-        			<z>-3</z>
-        		</position>
-        		<reference-dist>200.0</reference-dist>
-        		<max-dist>500.0</max-dist>
-    		</engine>
-
-    		<engine>
-        		<name>right n1</name>
-        		<path>Aircraft/VIP/Sounds/Lineage1000/whine.wav</path>
-        		<mode>looped</mode>
-        		<condition>
-            			<greater-than>
-                			<property>engines/engine[1]/n1</property>
-                			<value>2</value>
-            			</greater-than>
-        		</condition>
-        		<volume>
-            			<property>engines/engine[1]/n1</property>
-            			<factor>0.1</factor>
-            			<min>1</min>
-            			<max>8</max>
-        		</volume>
-        		<volume>
-            			<property>sim/sound/effects/volume</property>
-        		</volume>
-        		<pitch>
-            			<property>/engines/engine[1]/n1</property>
-            			<offset>0</offset>
-            			<factor>0.02</factor>
-            			<min>0.0</min>
-            			<max>1.5</max>
-        		</pitch>
-        		<position>
-            			<x>0</x>
-            			<y>-9.8</y>
-            			<z>-3</z>
-        		</position>
-        		<reference-dist>10.0</reference-dist>
-        		<max-dist>30.0</max-dist>
-    		</engine>
-
-    		<engine>
-        		<name>right n1_2</name>
-        		<path>Aircraft/VIP/Sounds/Lineage1000/turbine.wav</path>
-        		<mode>looped</mode>
-        		<condition>
-            			<greater-than>
-                			<property>engines/engine[1]/n1</property>
-                			<value>2</value>
-            			</greater-than>
-        		</condition>
-        		<pitch>
-            			<property>/engines/engine[1]/n1</property>
-            			<offset>0</offset>
-            			<factor>0.02</factor>
-            			<min>0.0</min>
-            			<max>2.0</max>
-        		</pitch>
-        		<volume>
-            			<property>engines/engine[1]/n1</property>
-            			<factor>0.1</factor>
-            			<min>0</min>
-            			<max>0.6</max>
-        		</volume>
-        		<volume>
-            			<property>sim/sound/effects/volume</property>
-        		</volume>
-        		<position>
-            			<x>0</x>
-            			<y>-9.8</y>
-            			<z>-3</z>
-        		</position>
-        		<reference-dist>10.0</reference-dist>
-        		<max-dist>30.0</max-dist>
-    		</engine>
-
-    		<engine>
-        		<name>right reverse thrust</name>
-        		<path>Aircraft/VIP/Sounds/Lineage1000/reverser.wav</path>
-        		<mode>looped</mode>
-        		<condition>
-	            		<and>
-        	        		<greater-than>
-        	            			<property>engines/engine[1]/n1</property>
-        	            			<value>2</value>
-        	        		</greater-than>
-        	        		<greater-than>
-        	            			<property>engines/engine[1]/reverser-pos-norm</property>
-        	            			<value>0</value>
-        	        		</greater-than>
-        	    		</and>
-        		</condition>
-        		<volume>
-            			<property>engines/engine[1]/n1</property>
- 			        <min>0.0</min>
-			        <max>1.0</max>
-		        </volume>
-		        <volume>
-            			<property>sim/sound/effects/volume</property>
+				<property>sim/sound/ivolume</property>
+				<factor>0.50</factor>
         		</volume>
         		<position>
             			<x>0</x>
@@ -298,12 +623,12 @@
             			<z>-3</z>
         		</position>
         		<reference-dist>10.0</reference-dist>
-        		<max-dist>30.0</max-dist>
+        		<max-dist>6000.0</max-dist>
     		</engine>
-
+    
     		<engine>
-        		<name>right engine inside</name>
-        		<path>Aircraft/VIP/Sounds/Lineage1000/inside.wav</path>
+        		<name>right engine reverser outside</name>
+        		<path>/Sounds/Lineage1000/reverser.wav</path>
         		<mode>looped</mode>
         		<condition>
             			<and>
@@ -311,32 +636,68 @@
                     				<property>engines/engine[1]/n1</property>
                     				<value>2</value>
                 			</greater-than>
-                			<property>sim/current-view/internal</property>
+                			<greater-than>
+                    				<property>engines/engine[1]/reverser-pos-norm</property>
+                    				<value>0</value>
+                			</greater-than>
+					<not>
+	                			<property>sim/current-view/internal</property>
+					</not>
             			</and>
-        		</condition>
-        		<pitch>
-            			<property>/engines/engine[1]/n1</property>
-            			<offset>0</offset>
+			</condition>
+        		<volume>
+            			<property>engines/engine[1]/n1</property>
             			<factor>0.02</factor>
             			<min>0.0</min>
             			<max>2.0</max>
-        		</pitch>
-        		<volume>
-            			<property>engines/engine[1]/thrust-lbs</property>
-            			<factor>0.000015</factor>
-            			<min>0</min>
-            			<max>1</max>
         		</volume>
         		<volume>
-            			<property>sim/sound/effects/volume</property>
+				<property>sim/sound/ovolume</property>
+				<factor>1.00</factor>
         		</volume>
         		<position>
             			<x>0</x>
-            			<y>-9.8</y>
+            			<y>9.8</y>
             			<z>-3</z>
         		</position>
-        		<reference-dist>200.0</reference-dist>
-        		<max-dist>500.0</max-dist>
+        		<reference-dist>10.0</reference-dist>
+        		<max-dist>6000.0</max-dist>
+    		</engine>
+    
+    		<engine>
+        		<name>right engine reverser outside</name>
+        		<path>/Sounds/Lineage1000/reverser.wav</path>
+        		<mode>looped</mode>
+        		<condition>
+            			<and>
+                			<greater-than>
+                    				<property>engines/engine[1]/n1</property>
+                    				<value>2</value>
+                			</greater-than>
+                			<greater-than>
+                    				<property>engines/engine[1]/reverser-pos-norm</property>
+                    				<value>0</value>
+                			</greater-than>
+                			<property>sim/current-view/internal</property>
+            			</and>
+			</condition>
+        		<volume>
+            			<property>engines/engine[1]/n1</property>
+            			<factor>0.02</factor>
+            			<min>0.0</min>
+            			<max>2.0</max>
+        		</volume>
+        		<volume>
+				<property>sim/sound/ivolume</property>
+				<factor>0.50</factor>
+        		</volume>
+        		<position>
+            			<x>0</x>
+            			<y>9.8</y>
+            			<z>-3</z>
+        		</position>
+        		<reference-dist>10.0</reference-dist>
+        		<max-dist>6000.0</max-dist>
     		</engine>
 
     		<gear1>
@@ -439,7 +800,7 @@
             		</or>
         		</condition>
         		<volume>
-            			<property>sim/sound/Ovolume</property>
+            			<property>sim/sound/effects/volume</property>
         		</volume>
         		<volume>
             			<property>/velocities/speed-down-fps</property>

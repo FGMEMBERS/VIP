@@ -21,7 +21,7 @@
 		<description>Embraer Lineage 1000 (190-100 EBJ)</description>
 		<author>Peter Brendt, Narendran Muraleedharan</author>
 		
-		<aircraft-version>V02.00.00</aircraft-version>
+		<aircraft-version>V03.00.00</aircraft-version>
 		<status>pre-beta</status>
 
 		<rating>
@@ -102,6 +102,8 @@
 		<sound>
 			<audible>true</audible>
 			<path>Aircraft/VIP/Sounds/Lineage1000/Lineage1000-sound.xml</path>
+			<ovolume type="float">1.0</ovolume>
+			<ivolume type="float">1.0</ivolume>
 		</sound>
 
 		<autostart>
